@@ -1,2 +1,4 @@
 rootProject.name = "Kumparan Task"
 include ':app'
+include ':common'
+include ':data'
