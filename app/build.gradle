@@ -4,6 +4,10 @@ plugins {
     id 'kotlin-android-extensions'
 }
 
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 0
+
 android {
     compileSdkVersion versions.compileSdk
     buildToolsVersion versions.buildTools
@@ -39,11 +43,11 @@ android {
 }
 
 private Integer generateVersionCode() {
-    return 1
+    return ext.versionMajor * 1000 + ext.versionMinor * 100 + ext.versionPatch
 }
 
 private String generateVersionName() {
-    return ""
+    return "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
 }
 
 
