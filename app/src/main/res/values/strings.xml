@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Kumparan Task</string>
+    <string name="toolbar_posts">Posts</string>
+    <string name="toolbar_comments">Comments</string>
+    <string name="toolbar_profile">Profile</string>
+    <string name="toolbar_photos">Photos</string>
+    <string name="comment_text"><![CDATA[<b>%1$s</b> %2$s]]></string>
+    <string name="post_user_text">%1$s \u2022 %2$s</string>
+    <string name="user_address_text">%1$s, %2$s, %3$s</string>
+    <string name="user_company_text">working at %1$s</string>
+    <string name="user_link_text"><![CDATA[<u>%1$s</u>]]></string>
+    <string name="album_photos_text">%1$d PHOTOS</string>
 </resources>
