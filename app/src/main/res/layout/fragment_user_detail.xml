@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".arch.ui.user.UserDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorBackground">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_256sdp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?android:attr/colorBackground"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_user"
+                    android:layout_width="@dimen/_56sdp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1.Core"
+                    app:layout_constraintStart_toStartOf="@id/iv_user"
+                    app:layout_constraintTop_toBottomOf="@id/iv_user"
+                    tools:text="Ridho Saputra" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_user_company"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/iv_user"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+                    tools:text="working at Romaguera-Crona" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_user_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2.Core"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/iv_user"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_company"
+                    tools:text="Kulas Light, Apt.556, Gwenorough" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_user_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2.Core"
+                    app:layout_constraintStart_toStartOf="@id/iv_user"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_address"
+                    tools:text="hildegard.org" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2.Core"
+                    app:layout_constraintStart_toEndOf="@id/tv_user_website"
+                    app:layout_constraintTop_toTopOf="@id/tv_user_website"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_user_website"
+                    tools:text="sicnere@april.biz" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="top"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleTextAppearance="@style/Widget.AppCompat.Toolbar.TextSize" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="?android:attr/colorBackground"
+            app:tabSelectedTextColor="?colorTextTitle"
+            app:tabIndicatorColor="?colorTextTitle"
+            android:layout_gravity="bottom" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

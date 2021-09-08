@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".arch.ui.post.detail.PostDetailFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextAppearance="@style/Widget.AppCompat.Toolbar.TextSize" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_8sdp">
+
+            <View
+                android:id="@+id/bg_post"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="?attr/colorCardBackground"
+                android:elevation="@dimen/_1sdp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_post_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_post_title" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:elevation="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="@id/bg_post"
+                app:layout_constraintTop_toTopOf="@id/bg_post"
+                app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_post_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:elevation="@dimen/_2sdp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1.Core"
+                app:layout_constraintEnd_toEndOf="@id/bg_post"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                app:layout_constraintTop_toTopOf="@id/iv_user"
+                tools:text="How to properly water flowers?" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_post_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:elevation="@dimen/_2sdp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="@id/bg_post"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                app:layout_constraintTop_toBottomOf="@id/tv_post_title"
+                tools:text="Ridho Saputra" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_post_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:elevation="@dimen/_2sdp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2.Core"
+                app:layout_constraintBottom_toBottomOf="@id/bg_post"
+                app:layout_constraintEnd_toEndOf="@id/tv_post_title"
+                app:layout_constraintStart_toStartOf="@id/iv_user"
+                app:layout_constraintTop_toBottomOf="@id/iv_user"
+                tools:text="Far out in the ocean the water is as blue as the petals of the loveliest cornflower" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comments"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bg_post"
+                tools:listitem="@layout/item_comment_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

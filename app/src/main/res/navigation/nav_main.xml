@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/postFragment">
+
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.putrash.kumparantask.arch.ui.post.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_postFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.putrash.kumparantask.arch.ui.post.detail.PostDetailFragment"
+        android:label="fragment_post_detail"
+        tools:layout="@layout/fragment_post_detail" >
+        <action
+            android:id="@+id/action_postDetailFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.putrash.kumparantask.arch.ui.user.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_userDetailFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+        <action
+            android:id="@+id/action_userDetailFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoDetailFragment"
+        android:name="com.putrash.kumparantask.arch.ui.photo.detail.PhotoDetailFragment"
+        android:label="fragment_photo_detail"
+        tools:layout="@layout/fragment_photo_detail" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.putrash.kumparantask.arch.ui.photo.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" >
+        <action
+            android:id="@+id/action_photoFragment_to_photoDetailFragment"
+            app:destination="@id/photoDetailFragment" />
+    </fragment>
+</navigation>

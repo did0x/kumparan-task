@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="@dimen/_156sdp"
+        android:layout_height="@dimen/_198sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.App.RoundedImageView"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_album_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1.Core"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="How to properly water flowers?" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_album_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2.Core"
+        app:layout_constraintBottom_toTopOf="@id/tv_album_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="26 POSTS" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
