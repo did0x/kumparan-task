@@ -1,6 +1,11 @@
 # Kumparan-Task
 Kumparan gave a project task to determine the skill test that I mastered for the initial selection process.
 
+## Preview
+Here are the preview of the app,
+
+![](https://i.ibb.co/1ZbzbLN/photo6183940917359127459.jpg) ![](https://i.ibb.co/qgLypDz/photo6183940917359127457.jpg) ![](https://i.ibb.co/8K85nLh/photo6183940917359127458.jpg) ![](https://i.ibb.co/85x0Y7N/photo6183940917359127456.jpg)
+
 ## Features
 There are some such features like,
 
